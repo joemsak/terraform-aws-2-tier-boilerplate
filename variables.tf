@@ -25,7 +25,3 @@ variable "aws_amis" {
     us-west-2 = "ami-003634241a8fcdec0"
   }
 }
-
-variable "terraform_private_key" {
-  description = "Full private key - sensitive write only"
-}
