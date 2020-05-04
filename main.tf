@@ -12,8 +12,8 @@ resource "aws_key_pair" "rrd" {
   public_key = file("./ssh/terraform.pub")
 }
 
-resource "aws_instance" "example" {
-  key_name      = aws_key_pair.example.key_name
+resource "aws_instance" "rrd" {
+  key_name      = aws_key_pair.rrd.key_name
   ami           = "ami-04590e7389a6e577c"
   instance_type = "t2.micro"
 
