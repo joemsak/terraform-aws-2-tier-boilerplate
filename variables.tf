@@ -1,19 +1,9 @@
-variable "public_key_path" {
-  description = <<DESCRIPTION
-Path to the SSH public key to be used for authentication.
-Ensure this keypair is added to your local SSH agent so provisioners can
-connect.
-
-Example: ~/.ssh/terraform.pub
-DESCRIPTION
-}
-
 variable "public_key" {
-  description = "Public SSH key for terraform's AWS key pair"
+  description = "Public SSH key from terraform's AWS key pair"
 }
 
 variable "private_key" {
-  description = "Private key for terraform's AWS key pair"
+  description = "Private PEM key from terraform's AWS key pair"
 }
 
 variable "key_name" {
