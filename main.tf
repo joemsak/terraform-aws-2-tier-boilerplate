@@ -1,15 +1,6 @@
-variable "AWS_ACCESS_ID" {
-  type = string
-}
-
 provider "aws" {
   profile = "default"
   region  = "us-west-2"
-}
-
-resource "aws_key_pair" "rrd" {
-  key_name   = var.AWS_ACCESS_ID
-  public_key = file("./ssh/terraform.pub")
 }
 
 resource "aws_instance" "rrd" {
