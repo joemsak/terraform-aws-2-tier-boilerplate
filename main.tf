@@ -14,12 +14,12 @@ resource "aws_instance" "rrd" {
       "sudo systemctl start nginx"
     ]
   }
-
-  provisioner "local-exec" {
-    command = "echo ${aws_instance.rrd.public_ip}"
-  }
 }
 
 resource "aws_eip" "ip" {
   instance = "${aws_instance.rrd.id}"
+}
+
+output "ip" {
+  value = "${aws_eip.ip.public_ip}"
 }
