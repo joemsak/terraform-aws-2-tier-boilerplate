@@ -8,8 +8,12 @@ Example: ~/.ssh/terraform.pub
 DESCRIPTION
 }
 
+variable "public_key" {
+  description = "Public SSH key for terraform's AWS key pair"
+}
+
 variable "private_key" {
-  description = "Private key for terraform key pair"
+  description = "Private key for terraform's AWS key pair"
 }
 
 variable "key_name" {
