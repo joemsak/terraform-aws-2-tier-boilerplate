@@ -4,7 +4,6 @@ provider "aws" {
 }
 
 resource "aws_instance" "rrd" {
-  key_name      = aws_key_pair.rrd.key_name
   ami           = "ami-04590e7389a6e577c"
   instance_type = "t2.micro"
 
